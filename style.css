@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.stApp {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #5B86E5, #36D1DC, #7F7FD5, #91EAE4);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Header styling */
+.header h1 {
+    font-weight: 700;
+    font-size: 2.6rem;
+    text-shadow: 0 0 20px rgba(255,255,255,0.4);
+    position: relative;
+    animation: glow 2.5s ease-in-out infinite alternate, fadeIn 2s ease-in-out;
+    margin-bottom: 0.3rem;
+}
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(255,255,255,0.4); }
+    to { text-shadow: 0 0 25px rgba(255,255,255,0.9); }
+}
+.header h1::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: rgba(255,255,255,0.5);
+    bottom: -10px;
+    left: 20%;
+    border-radius: 2px;
+    animation: underlineFade 3s ease-in-out infinite alternate;
+}
+@keyframes underlineFade {
+    0% {width: 40%; opacity: 0.6;}
+    100% {width: 80%; opacity: 1;}
+}
+.header p {
+    font-size: 1.1rem;
+    color: #f2f2f2;
+    margin-top: 0.7rem;
+    animation: fadeInUp 2s ease-in-out;
+}
+@keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Example buttons */
+button[kind="secondary"] {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 12px !important;
+    color: #fff !important;
+    padding: 8px 16px !important;
+    font-size: 0.9rem !important;
+    transition: 0.3s ease !important;
+    animation: fadeIn 2.5s ease-in-out !important;
+}
+button[kind="secondary"]:hover {
+    background: rgba(255, 255, 255, 0.35) !important;
+    transform: scale(1.08) !important;
+}
+
+/* Text area */
+textarea {
+    border-radius: 15px !important;
+    border: 2px solid rgba(255,255,255,0.25) !important;
+    background: rgba(255,255,255,0.25) !important;
+    color: #000 !important;
+    font-size: 1rem !important;
+}
+
+/* Analyze Button */
+.stButton button {
+    background: linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    padding: 0.6rem 1.4rem !important;
+    transition: all 0.3s ease-in-out;
+    border: none !important;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+.stButton button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #5B86E5 0%, #36D1DC 100%) !important;
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+/* Result box */
+.result-box {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 1.2rem;
+    margin-top: 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+.result-text {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+.confidence {
+    font-size: 0.95rem;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Progress bar */
+.progress {
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+.progress-bar {
+    height: 10px;
+    border-radius: 8px;
+    transition: width 1s ease-in-out;
+}
+
+/* Footer */
+.footer {
+    margin-top: 2rem;
+    color: #f3f3f3;
+    font-size: 0.9rem;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out;
+}
